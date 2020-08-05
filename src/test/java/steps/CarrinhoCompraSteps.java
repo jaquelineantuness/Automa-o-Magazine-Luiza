@@ -26,7 +26,6 @@ import io.cucumber.junit.Cucumber;
 public class CarrinhoCompraSteps {
 
 	private WebDriver driver;
-	private List<WebElement> li;
 	private String nomeProduto;
 
 	@Dado("que estou acessando a aplicação")
@@ -52,8 +51,6 @@ public class CarrinhoCompraSteps {
 		List<WebElement> li = driver.findElements(By.xpath("//li[@class='nm-product-item']"));
 
 		String text = li.get(0).getText();
-		System.out.println(li.get(0).getText());
-		System.out.println(li.size());
 
 		Assert.assertTrue(text.contains(string));
 	}
@@ -62,41 +59,46 @@ public class CarrinhoCompraSteps {
 	public void selecionoUmProduto() {
 		List<WebElement> li = driver.findElements(By.xpath("//li[@class='nm-product-item']"));
 
-		System.out.println(li.size());
-
-		System.out.println(li.get(3).getText());
 		nomeProduto = li.get(3).getText();
 		li.get(3).click();
-		// driver.findElement(By.id("product_deje76h9e2")).click();
-
+	
 	}
 
 	@Quando("adiciono ao carrinho")
 	public void adicionoAoCarrinho() {
-		// driver.findElement(By.xpath("//*[@class='button__buy
-		// button__buy-product-detail js-add-cart-button js-main-add-cart-button
-		// js-add-box-prime']"));
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.findElement(By.xpath(
+				"//*[@class='container-button-banner']")).click();
 
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// driver.findElement(By.xpath("//p[text()='Abajur Diamante Dome Branco Com
-		// Aramado Preto - Marryluz']"));
+		driver.findElement(By.xpath(
+				"//*[@class='button__buy button__buy-product-detail js-add-cart-button js-main-add-cart-button js-add-box-prime']")).click();
+
 	}
 
 	@Quando("abrir carrinho de compras")
 	public void abrirCarrinhoDeCompras() {
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='BasketPage-title']")));
+
+		String texto = driver.findElement(By.xpath("//div[@class='BasketPage-title']")).getText();
+
+		System.out.println(texto);
+		Assert.assertEquals("Sacola", texto);
 
 	}
 
 	@Então("devo encontrar o produto selecionado")
 	public void devoEncontrarOProdutoSelecionado() {
-
+		String titulo = driver.findElement(By.xpath("//p[contains(text(),'Abajur Diamante Dome')]")).getText();
+		Assert.assertEquals("Abajur Diamante Dome Branco Com Aramado Preto - Marryluz", titulo);
 	}
 
 	@After(order = 1)
 	public void screenshot(Scenario cenario) {
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("target/screenshot/" + cenario.getName()+ ".jpg"));
+			FileUtils.copyFile(file, new File("target/screenshot/" + cenario.getName() + ".jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
