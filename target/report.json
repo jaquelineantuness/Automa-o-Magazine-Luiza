@@ -1,0 +1,152 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-05T02:00:39.147Z",
+        "line": 9,
+        "name": "Deve inserir produto no carrinho com sucesso",
+        "description": "",
+        "id": "carrinho-de-compra;deve-inserir-produto-no-carrinho-com-sucesso",
+        "after": [
+          {
+            "result": {
+              "duration": 3510017451,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CarrinhoCompraSteps.screenshot(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 148401092,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CarrinhoCompraSteps.fecharBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 5125845073,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou acessando a aplicação",
+            "match": {
+              "location": "CarrinhoCompraSteps.queEstouAcessandoAAplicação()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4755433675,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "pesquisar pelo produto \"Abajur\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abajur\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CarrinhoCompraSteps.pesquisarPeloProduto(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 7653757835,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "selecionar o ícone de busca",
+            "match": {
+              "location": "CarrinhoCompraSteps.selecionarOÍconeDeBusca()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 8592124031,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "visualizo uma lista contendo \"Abajur\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abajur\"",
+                  "offset": 29
+                }
+              ],
+              "location": "CarrinhoCompraSteps.visualizoUmaListaContendo(String)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 2498060693,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "seleciono um produto",
+            "match": {
+              "location": "CarrinhoCompraSteps.selecionoUmProduto()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 7333507,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "adiciono ao carrinho",
+            "match": {
+              "location": "CarrinhoCompraSteps.adicionoAoCarrinho()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 2954830,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "abrir carrinho de compras",
+            "match": {
+              "location": "CarrinhoCompraSteps.abrirCarrinhoDeCompras()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1994224,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "devo encontrar o produto selecionado",
+            "match": {
+              "location": "CarrinhoCompraSteps.devoEncontrarOProdutoSelecionado()"
+            },
+            "keyword": "Então "
+          }
+        ]
+      }
+    ],
+    "name": "Carrinho de compra",
+    "description": "  Como um usuário de e-commerce\n  Gostaria de encontrar o produto desejado \n  E adicionar no carrinho de compras",
+    "id": "carrinho-de-compra",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/feature/carrinho_de_compra.feature",
+    "tags": []
+  }
+]
