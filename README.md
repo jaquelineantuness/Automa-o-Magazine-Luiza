@@ -4,18 +4,18 @@
 
   ### **A automação utilizou as seguintes ferramentas:**
 
-    - Análise e Escrita dos Cenários de testes em BDD. 
-    - Automação dos cenários levantados, utilizando Selenium WebDrive e Cucumber.
-    - Linguagem de programação utilizada: JAVA
+   - Análise e Escrita dos Cenários de testes em BDD. 
+   - Automação dos cenários levantados, utilizando Selenium WebDrive e Cucumber.
+   - Linguagem de programação utilizada: JAVA
     
   ### **Especificação de Requisitos:**  
     Os cenários levantados, consideraram o seguinte Fluxo
-     - Acesso ao Site
-     - Busca por produto
-     - Validação do retorno da busca
-     - Escolha de um produto da lista
-     - Adicionar produto no carrinho
-     - Validação do produto no carrinho
+    - Acesso ao Site
+    - Busca por produto
+    - Validação do retorno da busca
+    - Escolha de um produto da lista
+    - Adicionar produto no carrinho
+    - Validação do produto no carrinho
   
   ### **Cenários**
   
