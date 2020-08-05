@@ -21,13 +21,13 @@
   
  Os cenários levantados, utilizaram o BDD e estruturados no modelo imperativo, do qual exemplifica com mais detalhes a interação do usuário com a aplicação.
 
-   <b>Location: <b> /src/test/resources/feature/carrinho_de_compra.feature
+   <b>Location:<b> /src/test/resources/feature/carrinho_de_compra.feature
   
   ### **Screenshot**
     
    Foi realizado a automação das Screenshots ao final da execução dos cenários
   
-   <b>Location: <b> /target/screenshot
+   <b>Location:<b> /target/screenshot
 
     
   ### **Relatório**
