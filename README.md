@@ -21,20 +21,20 @@
   
  Os cenários levantados, utilizaram o BDD e estruturados no modelo imperativo, do qual exemplifica com mais detalhes a interação do usuário com a aplicação.
 
-   <b>Location:<b> /src/test/resources/feature/carrinho_de_compra.feature
+   **Location:** /src/test/resources/feature/carrinho_de_compra.feature
   
   ### **Screenshot**
     
    Foi realizado a automação das Screenshots ao final da execução dos cenários
   
-   <b>Location:<b> /target/screenshot
+   **Location:** /target/screenshot
 
     
   ### **Relatório**
   
    A princípio mantive o modelo de relatório padrão que o Framework Cucumber fornece, mas ele possibilita que seja aplicado camadas de CSS, deixando os relatórios mais dinâmicos e visualmente mais atrativos.
     
-   <b>Location:<b> /target/report.html/index.html
+   **Location:** /target/report.html/index.html
   
   
 ### **Considerações**
