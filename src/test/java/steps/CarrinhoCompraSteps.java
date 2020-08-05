@@ -61,17 +61,17 @@ public class CarrinhoCompraSteps {
 
 		nomeProduto = li.get(3).getText();
 		li.get(3).click();
-	
+
 	}
 
 	@Quando("adiciono ao carrinho")
 	public void adicionoAoCarrinho() {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(
-				"//*[@class='container-button-banner']")).click();
+		driver.findElement(By.xpath("//*[@class='container-button-banner']")).click();
 
 		driver.findElement(By.xpath(
-				"//*[@class='button__buy button__buy-product-detail js-add-cart-button js-main-add-cart-button js-add-box-prime']")).click();
+				"//*[@class='button__buy button__buy-product-detail js-add-cart-button js-main-add-cart-button js-add-box-prime']"))
+				.click();
 
 	}
 
@@ -92,6 +92,36 @@ public class CarrinhoCompraSteps {
 	public void devoEncontrarOProdutoSelecionado() {
 		String titulo = driver.findElement(By.xpath("//p[contains(text(),'Abajur Diamante Dome')]")).getText();
 		Assert.assertEquals("Abajur Diamante Dome Branco Com Aramado Preto - Marryluz", titulo);
+	}
+
+	@Então("é exibido a mensagem {string}")
+	public void éExibidoAMensagem(String string) {
+		// Write code here that turns the phrase above into concrete actions
+		throw new cucumber.api.PendingException();
+	}
+
+	@Então("visualizo a mensagem de produto indisponível")
+	public void visualizoAMensagemDeProdutoIndisponível() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new cucumber.api.PendingException();
+	}
+
+	@Dado("tenha inserido mais de uma vez o produto {string} no carrinho")
+	public void tenhaInseridoMaisDeUmaVezOProdutoNoCarrinho(String string) {
+		// Write code here that turns the phrase above into concrete actions
+		throw new cucumber.api.PendingException();
+	}
+
+	@Quando("consultar o carrinho")
+	public void consultarOCarrinho() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new cucumber.api.PendingException();
+	}
+
+	@Então("terá apenas um produto listado")
+	public void teráApenasUmProdutoListado() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new cucumber.api.PendingException();
 	}
 
 	@After(order = 1)

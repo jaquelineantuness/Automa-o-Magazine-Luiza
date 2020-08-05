@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-08-05T15:25:52.579Z",
+        "start_timestamp": "2020-08-05T16:20:06.020Z",
         "line": 9,
         "name": "Deve inserir produto no carrinho com sucesso",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 291513147,
+              "duration": 1086303066,
               "status": "passed"
             },
             "match": {
@@ -20,7 +20,7 @@
           },
           {
             "result": {
-              "duration": 112722276,
+              "duration": 119312625,
               "status": "passed"
             },
             "match": {
@@ -33,7 +33,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4490190517,
+              "duration": 5313980294,
               "status": "passed"
             },
             "line": 10,
@@ -45,7 +45,7 @@
           },
           {
             "result": {
-              "duration": 3311879216,
+              "duration": 3455023020,
               "status": "passed"
             },
             "line": 11,
@@ -63,7 +63,7 @@
           },
           {
             "result": {
-              "duration": 3324540549,
+              "duration": 4661142955,
               "status": "passed"
             },
             "line": 12,
@@ -75,7 +75,7 @@
           },
           {
             "result": {
-              "duration": 4179463062,
+              "duration": 3507776550,
               "status": "passed"
             },
             "line": 13,
@@ -93,7 +93,7 @@
           },
           {
             "result": {
-              "duration": 3189800939,
+              "duration": 2626581998,
               "status": "passed"
             },
             "line": 14,
@@ -105,7 +105,7 @@
           },
           {
             "result": {
-              "duration": 3662531180,
+              "duration": 4266622761,
               "status": "passed"
             },
             "line": 15,
@@ -117,7 +117,7 @@
           },
           {
             "result": {
-              "duration": 2957107576,
+              "duration": 3649242414,
               "status": "passed"
             },
             "line": 16,
@@ -129,13 +129,104 @@
           },
           {
             "result": {
-              "duration": 101599193,
+              "duration": 114394249,
               "status": "passed"
             },
             "line": 17,
             "name": "devo encontrar o produto selecionado",
             "match": {
               "location": "CarrinhoCompraSteps.devoEncontrarOProdutoSelecionado()"
+            },
+            "keyword": "Então "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-05T16:20:34.895Z",
+        "line": 19,
+        "name": "Pesquisar produto fora do catalogo",
+        "description": "",
+        "id": "carrinho-de-compra;pesquisar-produto-fora-do-catalogo",
+        "after": [
+          {
+            "result": {
+              "duration": 821540311,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CarrinhoCompraSteps.screenshot(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 88857266,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CarrinhoCompraSteps.fecharBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 4707302124,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "que estou acessando a aplicação",
+            "match": {
+              "location": "CarrinhoCompraSteps.queEstouAcessandoAAplicação()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3099232578,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "pesquisar pelo produto \"Buscopan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Buscopan\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CarrinhoCompraSteps.pesquisarPeloProduto(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2993984276,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "selecionar o ícone de busca",
+            "match": {
+              "location": "CarrinhoCompraSteps.selecionarOÍconeDeBusca()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 787880,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "é exibido a mensagem \"Sua busca por buscopan não encontrou resultado algum :(\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sua busca por buscopan não encontrou resultado algum :(\"",
+                  "offset": 21
+                }
+              ],
+              "location": "CarrinhoCompraSteps.éExibidoAMensagem(String)"
             },
             "keyword": "Então "
           }
